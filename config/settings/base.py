@@ -18,6 +18,7 @@ INSTALLED_APPS = [
     "django.contrib.staticfiles",
     # Local apps
     "apps.posts",
+    "apps.users",
 ]
 
 MIDDLEWARE = [
@@ -47,7 +48,6 @@ TEMPLATES = [
         },
     },
 ]
-
 WSGI_APPLICATION = "config.wsgi.application"
 
 # Database (will be overridden in environment-specific settings)
