@@ -5,6 +5,12 @@ Base settings shared across all environments (development, production, etc.).
 from pathlib import Path
 import os
 
+
+from django.core.management.utils import get_random_secret_key
+
+SECRET_KEY = os.environ.get("DJANGO_SECRET_KEY", get_random_secret_key())
+
+
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
 
